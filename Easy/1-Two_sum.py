@@ -33,7 +33,6 @@ def twoSum2(nums, target):
             return [nums_map[missing_num], i]
         else:
             nums_map[num] = i
-
     return []
 
 
