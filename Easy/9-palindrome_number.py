@@ -45,6 +45,7 @@ def isPalindrome2(x: int) -> bool:
     return True
 
 
+# Third attemmpt was performed with the help of chatGPT's hints
 def isPalindrome3(x: int) -> bool:
 
     # Negative cant be palindrome
@@ -63,7 +64,7 @@ def isPalindrome3(x: int) -> bool:
 
     # Stay in loop while left half has more digits than right (reversed) half
     while x > reversed_half:
-        
+
         # Get rightmost digit from current x
         rightmost_digit = x % 10
 
