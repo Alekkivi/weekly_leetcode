@@ -22,20 +22,17 @@ def romanToInt(s):
         if s:
             next_letter = s[0]
 
-            if current_letter == "I":
-                if next_letter == "V" or next_letter == "X":
-                    total += (values[next_letter] - 2)
-                    s = s[1:]
+            if current_letter == "I" and next_letter == "V" or current_letter == "I" and next_letter == "X":
+                total += (values[next_letter] - 2)
+                s = s[1:]
 
-            elif current_letter == "X":
-                if next_letter == "L" or next_letter == "C":
-                    total += (values[next_letter] - 20)
-                    s = s[1:]
+            if current_letter == "X" and next_letter == "L" or current_letter == "X" and next_letter == "C":
+                total += (values[next_letter] - 20)
+                s = s[1:]
 
-            elif current_letter == "C":
-                if next_letter == "D" or next_letter == "M":
-                    total += (values[next_letter] - 200)
-                    s = s[1:]
+            if current_letter == "C" and next_letter == "D" or current_letter == "C" and next_letter == "M":
+                total += (values[next_letter] - 200)
+                s = s[1:]
 
     return total
         
